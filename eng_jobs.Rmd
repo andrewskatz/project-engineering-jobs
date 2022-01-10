@@ -381,7 +381,6 @@ sus_df <- read_csv(paste0(data_path, data_file))
 
 
 ```{r}
-
 # Remove brackets from education lists and replace empty brackets with "no value reported"
 
 sus_df <- sus_df %>% 
@@ -391,9 +390,10 @@ sus_df <- sus_df %>%
   mutate(education = str_remove_all(education, '"')) %>% 
   mutate(education = str_remove_all(education, "'")) %>% 
   mutate(education = str_replace_all(education, ', ', ','))
+```
 
 
-
+```{r}
 # Remove brackets and quotation marks from skills list and replace empty brackets with "no value reported"
 
 sus_df <- sus_df %>% 
