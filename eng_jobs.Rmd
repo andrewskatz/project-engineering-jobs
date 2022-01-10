@@ -202,7 +202,6 @@ names(civ_df)
 
 
 ```{r}
-
 # Remove brackets from education lists
 
 civ_df <- civ_df %>% mutate(education = str_remove(education, "\\[")) %>% 
@@ -210,9 +209,10 @@ civ_df <- civ_df %>% mutate(education = str_remove(education, "\\[")) %>%
   mutate(education = str_remove_all(education, '"')) %>% 
   mutate(education = str_remove_all(education, "'")) %>% 
   mutate(education = str_replace_all(education, ', ', ','))
+```
 
 
-
+```{r}
 # Remove brackets and quotation marks from skills list
 
 civ_df <- civ_df %>% mutate(skills = str_remove(skills, "\\[")) %>% 
@@ -269,10 +269,6 @@ names(civ_df)
 
 
 
-
-```{r}
-
-```
 
 
 
